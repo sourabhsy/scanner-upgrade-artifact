@@ -1,0 +1,240 @@
+$ /usr/local/bin/python3 /app/scripts/setup_checkouts.py /work
+owasp-full: cloning https://github.com/OWASP-Benchmark/BenchmarkJava.git @ acc50f20
+  $ git clone --filter=blob:none --no-checkout https://github.com/OWASP-Benchmark/BenchmarkJava.git /work/freeze/owasp-full
+  $ git -C /work/freeze/owasp-full sparse-checkout init --cone
+  $ git -C /work/freeze/owasp-full sparse-checkout set src/main/java/org/owasp/benchmark/testcode
+  $ git -C /work/freeze/owasp-full checkout acc50f20ec449e2b977a7c409fa8175491657cba
+owasp-full: HEAD verified acc50f20ec449e2b977a7c409fa8175491657cba
+juliet-full: cloning https://github.com/arichardson/juliet-test-suite-c.git @ f88433e3
+  $ git clone --filter=blob:none --no-checkout https://github.com/arichardson/juliet-test-suite-c.git /work/freeze/juliet-full
+  $ git -C /work/freeze/juliet-full sparse-checkout init --cone
+  $ git -C /work/freeze/juliet-full sparse-checkout set testcases/CWE121_Stack_Based_Buffer_Overflow testcases/CWE122_Heap_Based_Buffer_Overflow testcases/CWE190_Integer_Overflow testcases/CWE476_NULL_Pointer_Dereference testcases/CWE78_OS_Command_Injection
+  $ git -C /work/freeze/juliet-full checkout f88433e3443648a17671398797a04ea1f8e1a274
+juliet-full: HEAD verified f88433e3443648a17671398797a04ea1f8e1a274
+pc-java: cloning https://github.com/apache/commons-lang.git @ a8e08aef
+  $ git clone --filter=blob:none --no-checkout https://github.com/apache/commons-lang.git /work/freeze/pc-java
+  $ git -C /work/freeze/pc-java sparse-checkout init --cone
+  $ git -C /work/freeze/pc-java sparse-checkout set src/main/java
+  $ git -C /work/freeze/pc-java checkout a8e08aef142048a88be63d3a60848f822af406fd
+pc-java: HEAD verified a8e08aef142048a88be63d3a60848f822af406fd
+pc-c: cloning https://github.com/curl/curl.git @ 19b29900
+  $ git clone --filter=blob:none --no-checkout https://github.com/curl/curl.git /work/freeze/pc-c
+  $ git -C /work/freeze/pc-c sparse-checkout init --cone
+  $ git -C /work/freeze/pc-c sparse-checkout set lib src
+  $ git -C /work/freeze/pc-c checkout 19b299005fbe2d895f4ad525cfdae62a2220c3ea
+pc-c: HEAD verified 19b299005fbe2d895f4ad525cfdae62a2220c3ea
+rules-old: cloning https://github.com/semgrep/semgrep-rules.git @ f2b65185
+  $ git clone --filter=blob:none --no-checkout https://github.com/semgrep/semgrep-rules.git /work/freeze/rules-old
+  $ git -C /work/freeze/rules-old sparse-checkout init --cone
+  $ git -C /work/freeze/rules-old sparse-checkout set java c
+  $ git -C /work/freeze/rules-old checkout f2b6518560d23c4fcf9a97dd41cbdbbe6be49de7
+rules-old: HEAD verified f2b6518560d23c4fcf9a97dd41cbdbbe6be49de7
+rules-new: cloning https://github.com/semgrep/semgrep-rules.git @ 17e31e11
+  $ git clone --filter=blob:none --no-checkout https://github.com/semgrep/semgrep-rules.git /work/freeze/rules-new
+  $ git -C /work/freeze/rules-new sparse-checkout init --cone
+  $ git -C /work/freeze/rules-new sparse-checkout set java c
+  $ git -C /work/freeze/rules-new checkout 17e31e11ebac99fb7dfe1cd288f7a32151b6f3f9
+rules-new: HEAD verified 17e31e11ebac99fb7dfe1cd288f7a32151b6f3f9
+rules-old: 142 rule files verified against pack manifest
+rules-new: 142 rule files verified against pack manifest
+CHECKOUTS READY
+$ /usr/local/bin/python3 /app/scripts/run_parallel.py --root /work --tools /opt/venvs --rules-old /work/freeze/rules-old --rules-new /work/freeze/rules-new --repeats 1 --jobs 16 --workers 4
+batches: 14
+  ff-c-CWE121: 5906 files
+  ff-c-CWE122: 3656 files
+  ff-c-CWE190: 5040 files
+  ff-c-CWE476: 372 files
+  ff-c-CWE78: 5600 files
+  ff-c-project: 240 files
+  sg-c-CWE121: 5906 files
+  sg-c-CWE122: 3656 files
+  sg-c-CWE190: 5040 files
+  sg-c-CWE476: 372 files
+  sg-c-CWE78: 5600 files
+  sg-c-project: 240 files
+  sg-java-corpus: 2740 files
+  sg-java-project: 264 files
+SHA-verified 23818 unique frozen files
+resuming: 0 invocations already complete
+invocations to run: 28 (workers=4, jobs=16)
+  semgrep-1.172.0 sg-c-CWE476 rep1 exit=0 32.52s results=0 errors=0
+  semgrep-1.172.0 sg-c-CWE122 rep1 exit=0 822.78s results=2947 errors=0
+  semgrep-1.172.0 sg-c-project rep1 exit=0 53.97s results=129 errors=135
+  semgrep-1.172.0 sg-c-CWE190 rep1 exit=0 895.06s results=2300 errors=190
+  semgrep-1.172.0 sg-java-project rep1 exit=0 160.68s results=26 errors=0
+  semgrep-1.172.0 sg-c-CWE121 rep1 exit=0 1334.73s results=4996 errors=0
+  semgrep-1.172.0 sg-c-CWE78 rep1 exit=0 1306.22s results=4650 errors=0
+  semgrep-1.182.0 sg-c-CWE122 rep1 exit=0 865.55s results=2947 errors=0
+  semgrep-1.182.0 sg-c-CWE476 rep1 exit=0 29.35s results=0 errors=0
+  semgrep-1.182.0 sg-c-CWE121 rep1 exit=0 1219.6s results=4996 errors=0
+  semgrep-1.182.0 sg-c-CWE190 rep1 exit=0 946.12s results=2300 errors=190
+  semgrep-1.182.0 sg-c-project rep1 exit=0 57.8s results=141 errors=134
+  semgrep-1.182.0 sg-java-project rep1 exit=0 182.11s results=26 errors=0
+  semgrep-1.172.0 sg-java-corpus rep1 exit=0 1757.07s results=2565 errors=0
+  flawfinder-2.0.19 ff-c-CWE121 rep1 exit=0 127.15s results=27035 errors=None
+  flawfinder-2.0.19 ff-c-CWE122 rep1 exit=0 73.66s results=12240 errors=None
+  flawfinder-2.0.19 ff-c-CWE476 rep1 exit=0 5.56s results=276 errors=None
+  flawfinder-2.0.19 ff-c-CWE190 rep1 exit=0 99.62s results=6685 errors=None
+  flawfinder-2.0.19 ff-c-project rep1 exit=0 6.49s results=1224 errors=None
+  flawfinder-2.0.19 ff-c-CWE78 rep1 exit=0 148.99s results=28805 errors=None
+  flawfinder-2.0.20 ff-c-CWE121 rep1 exit=0 143.58s results=27035 errors=None
+  flawfinder-2.0.20 ff-c-CWE122 rep1 exit=0 73.0s results=12240 errors=None
+  flawfinder-2.0.20 ff-c-CWE476 rep1 exit=0 5.67s results=276 errors=None
+  flawfinder-2.0.20 ff-c-CWE190 rep1 exit=0 99.83s results=6685 errors=None
+  flawfinder-2.0.20 ff-c-project rep1 exit=0 6.54s results=1221 errors=None
+  flawfinder-2.0.20 ff-c-CWE78 rep1 exit=0 82.26s results=28805 errors=None
+  semgrep-1.182.0 sg-java-corpus rep1 exit=0 888.25s results=2565 errors=0
+  semgrep-1.182.0 sg-c-CWE78 rep1 exit=0 1239.8s results=4650 errors=0
+SCAN COMPLETE
+$ /usr/local/bin/python3 /app/scripts/compare.py --outputs /work/outputs --bundle /bundle
+PASS findings semgrep-1.172.0/sg-java-corpus | yours 2565 vs bundle 2565
+PASS errors semgrep-1.172.0/sg-java-corpus | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.172.0/sg-java-corpus
+PASS findings semgrep-1.172.0/sg-java-project | yours 26 vs bundle 26
+PASS errors semgrep-1.172.0/sg-java-project | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.172.0/sg-java-project
+PASS findings semgrep-1.172.0/sg-c-CWE121 | yours 4996 vs bundle 4996
+PASS errors semgrep-1.172.0/sg-c-CWE121 | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.172.0/sg-c-CWE121
+PASS findings semgrep-1.172.0/sg-c-CWE122 | yours 2947 vs bundle 2947
+PASS errors semgrep-1.172.0/sg-c-CWE122 | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.172.0/sg-c-CWE122
+PASS findings semgrep-1.172.0/sg-c-CWE190 | yours 2300 vs bundle 2300
+PASS errors semgrep-1.172.0/sg-c-CWE190 | yours 190 vs bundle 190
+PASS skipped_rules semgrep-1.172.0/sg-c-CWE190
+PASS findings semgrep-1.172.0/sg-c-CWE476 | yours 0 vs bundle 0
+PASS errors semgrep-1.172.0/sg-c-CWE476 | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.172.0/sg-c-CWE476
+PASS findings semgrep-1.172.0/sg-c-CWE78 | yours 4650 vs bundle 4650
+PASS errors semgrep-1.172.0/sg-c-CWE78 | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.172.0/sg-c-CWE78
+PASS findings semgrep-1.172.0/sg-c-project | yours 129 vs bundle 129
+PASS errors semgrep-1.172.0/sg-c-project | yours 135 vs bundle 135
+PASS skipped_rules semgrep-1.172.0/sg-c-project
+PASS findings semgrep-1.182.0/sg-java-corpus | yours 2565 vs bundle 2565
+PASS errors semgrep-1.182.0/sg-java-corpus | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.182.0/sg-java-corpus
+PASS findings semgrep-1.182.0/sg-java-project | yours 26 vs bundle 26
+PASS errors semgrep-1.182.0/sg-java-project | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.182.0/sg-java-project
+PASS findings semgrep-1.182.0/sg-c-CWE121 | yours 4996 vs bundle 4996
+PASS errors semgrep-1.182.0/sg-c-CWE121 | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.182.0/sg-c-CWE121
+PASS findings semgrep-1.182.0/sg-c-CWE122 | yours 2947 vs bundle 2947
+PASS errors semgrep-1.182.0/sg-c-CWE122 | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.182.0/sg-c-CWE122
+PASS findings semgrep-1.182.0/sg-c-CWE190 | yours 2300 vs bundle 2300
+PASS errors semgrep-1.182.0/sg-c-CWE190 | yours 190 vs bundle 190
+PASS skipped_rules semgrep-1.182.0/sg-c-CWE190
+PASS findings semgrep-1.182.0/sg-c-CWE476 | yours 0 vs bundle 0
+PASS errors semgrep-1.182.0/sg-c-CWE476 | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.182.0/sg-c-CWE476
+PASS findings semgrep-1.182.0/sg-c-CWE78 | yours 4650 vs bundle 4650
+PASS errors semgrep-1.182.0/sg-c-CWE78 | yours 0 vs bundle 0
+PASS skipped_rules semgrep-1.182.0/sg-c-CWE78
+PASS findings semgrep-1.182.0/sg-c-project | yours 141 vs bundle 141
+PASS errors semgrep-1.182.0/sg-c-project | yours 134 vs bundle 134
+PASS skipped_rules semgrep-1.182.0/sg-c-project
+PASS findings flawfinder-2.0.19/ff-c-CWE121 | yours 27035 vs bundle 27035
+PASS errors flawfinder-2.0.19/ff-c-CWE121 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.19/ff-c-CWE121
+PASS findings flawfinder-2.0.19/ff-c-CWE122 | yours 12240 vs bundle 12240
+PASS errors flawfinder-2.0.19/ff-c-CWE122 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.19/ff-c-CWE122
+PASS findings flawfinder-2.0.19/ff-c-CWE190 | yours 6685 vs bundle 6685
+PASS errors flawfinder-2.0.19/ff-c-CWE190 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.19/ff-c-CWE190
+PASS findings flawfinder-2.0.19/ff-c-CWE476 | yours 276 vs bundle 276
+PASS errors flawfinder-2.0.19/ff-c-CWE476 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.19/ff-c-CWE476
+PASS findings flawfinder-2.0.19/ff-c-CWE78 | yours 28805 vs bundle 28805
+PASS errors flawfinder-2.0.19/ff-c-CWE78 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.19/ff-c-CWE78
+PASS findings flawfinder-2.0.19/ff-c-project | yours 1224 vs bundle 1224
+PASS errors flawfinder-2.0.19/ff-c-project | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.19/ff-c-project
+PASS findings flawfinder-2.0.20/ff-c-CWE121 | yours 27035 vs bundle 27035
+PASS errors flawfinder-2.0.20/ff-c-CWE121 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.20/ff-c-CWE121
+PASS findings flawfinder-2.0.20/ff-c-CWE122 | yours 12240 vs bundle 12240
+PASS errors flawfinder-2.0.20/ff-c-CWE122 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.20/ff-c-CWE122
+PASS findings flawfinder-2.0.20/ff-c-CWE190 | yours 6685 vs bundle 6685
+PASS errors flawfinder-2.0.20/ff-c-CWE190 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.20/ff-c-CWE190
+PASS findings flawfinder-2.0.20/ff-c-CWE476 | yours 276 vs bundle 276
+PASS errors flawfinder-2.0.20/ff-c-CWE476 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.20/ff-c-CWE476
+PASS findings flawfinder-2.0.20/ff-c-CWE78 | yours 28805 vs bundle 28805
+PASS errors flawfinder-2.0.20/ff-c-CWE78 | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.20/ff-c-CWE78
+PASS findings flawfinder-2.0.20/ff-c-project | yours 1221 vs bundle 1221
+PASS errors flawfinder-2.0.20/ff-c-project | yours 0 vs bundle 0
+PASS skipped_rules flawfinder-2.0.20/ff-c-project
+PASS blocks policy semgrep-1.172.0/sg-java-corpus | yours 571 vs bundle 571
+PASS blocks sensitivity semgrep-1.172.0/sg-java-corpus | yours 1870 vs bundle 1870
+PASS blocks policy semgrep-1.172.0/sg-java-project | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.172.0/sg-java-project | yours 6 vs bundle 6
+PASS blocks policy semgrep-1.172.0/sg-c-CWE121 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.172.0/sg-c-CWE121 | yours 1536 vs bundle 1536
+PASS blocks policy semgrep-1.172.0/sg-c-CWE122 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.172.0/sg-c-CWE122 | yours 896 vs bundle 896
+PASS blocks policy semgrep-1.172.0/sg-c-CWE190 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.172.0/sg-c-CWE190 | yours 570 vs bundle 570
+PASS blocks policy semgrep-1.172.0/sg-c-CWE476 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.172.0/sg-c-CWE476 | yours 0 vs bundle 0
+PASS blocks policy semgrep-1.172.0/sg-c-CWE78 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.172.0/sg-c-CWE78 | yours 2660 vs bundle 2660
+PASS blocks policy semgrep-1.172.0/sg-c-project | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.172.0/sg-c-project | yours 72 vs bundle 72
+PASS blocks policy semgrep-1.182.0/sg-java-corpus | yours 571 vs bundle 571
+PASS blocks sensitivity semgrep-1.182.0/sg-java-corpus | yours 1870 vs bundle 1870
+PASS blocks policy semgrep-1.182.0/sg-java-project | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.182.0/sg-java-project | yours 6 vs bundle 6
+PASS blocks policy semgrep-1.182.0/sg-c-CWE121 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.182.0/sg-c-CWE121 | yours 1536 vs bundle 1536
+PASS blocks policy semgrep-1.182.0/sg-c-CWE122 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.182.0/sg-c-CWE122 | yours 896 vs bundle 896
+PASS blocks policy semgrep-1.182.0/sg-c-CWE190 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.182.0/sg-c-CWE190 | yours 570 vs bundle 570
+PASS blocks policy semgrep-1.182.0/sg-c-CWE476 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.182.0/sg-c-CWE476 | yours 0 vs bundle 0
+PASS blocks policy semgrep-1.182.0/sg-c-CWE78 | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.182.0/sg-c-CWE78 | yours 2660 vs bundle 2660
+PASS blocks policy semgrep-1.182.0/sg-c-project | yours 0 vs bundle 0
+PASS blocks sensitivity semgrep-1.182.0/sg-c-project | yours 80 vs bundle 80
+PASS blocks policy flawfinder-2.0.19/ff-c-CWE121 | yours 1170 vs bundle 1170
+PASS blocks sensitivity flawfinder-2.0.19/ff-c-CWE121 | yours 4379 vs bundle 4379
+PASS blocks policy flawfinder-2.0.19/ff-c-CWE122 | yours 638 vs bundle 638
+PASS blocks sensitivity flawfinder-2.0.19/ff-c-CWE122 | yours 2683 vs bundle 2683
+PASS blocks policy flawfinder-2.0.19/ff-c-CWE190 | yours 190 vs bundle 190
+PASS blocks sensitivity flawfinder-2.0.19/ff-c-CWE190 | yours 3425 vs bundle 3425
+PASS blocks policy flawfinder-2.0.19/ff-c-CWE476 | yours 0 vs bundle 0
+PASS blocks sensitivity flawfinder-2.0.19/ff-c-CWE476 | yours 270 vs bundle 270
+PASS blocks policy flawfinder-2.0.19/ff-c-CWE78 | yours 2200 vs bundle 2200
+PASS blocks sensitivity flawfinder-2.0.19/ff-c-CWE78 | yours 4704 vs bundle 4704
+PASS blocks policy flawfinder-2.0.19/ff-c-project | yours 2 vs bundle 2
+PASS blocks sensitivity flawfinder-2.0.19/ff-c-project | yours 58 vs bundle 58
+PASS blocks policy flawfinder-2.0.20/ff-c-CWE121 | yours 1170 vs bundle 1170
+PASS blocks sensitivity flawfinder-2.0.20/ff-c-CWE121 | yours 4379 vs bundle 4379
+PASS blocks policy flawfinder-2.0.20/ff-c-CWE122 | yours 638 vs bundle 638
+PASS blocks sensitivity flawfinder-2.0.20/ff-c-CWE122 | yours 2683 vs bundle 2683
+PASS blocks policy flawfinder-2.0.20/ff-c-CWE190 | yours 190 vs bundle 190
+PASS blocks sensitivity flawfinder-2.0.20/ff-c-CWE190 | yours 3425 vs bundle 3425
+PASS blocks policy flawfinder-2.0.20/ff-c-CWE476 | yours 0 vs bundle 0
+PASS blocks sensitivity flawfinder-2.0.20/ff-c-CWE476 | yours 270 vs bundle 270
+PASS blocks policy flawfinder-2.0.20/ff-c-CWE78 | yours 2200 vs bundle 2200
+PASS blocks sensitivity flawfinder-2.0.20/ff-c-CWE78 | yours 4704 vs bundle 4704
+PASS blocks policy flawfinder-2.0.20/ff-c-project | yours 2 vs bundle 2
+PASS blocks sensitivity flawfinder-2.0.20/ff-c-project | yours 58 vs bundle 58
+PASS flips semgrep/java-corpus | recomputed (0, 0, 0)
+PASS flips semgrep/java-project | recomputed (0, 0, 0)
+PASS flips semgrep/c-corpus | recomputed (0, 0, 0)
+PASS flips semgrep/c-project | recomputed (0, 0, 8)
+PASS flips flawfinder/c-corpus | recomputed (0, 0, 0)
+PASS flips flawfinder/c-project | recomputed (0, 0, 0)
+NOTE: no rep2 outputs found; repeatability check skipped (run with --repeats 2 to include it).
+
+ALL COMPARE CHECKS PASS
+
+Done. Outputs: /work/outputs

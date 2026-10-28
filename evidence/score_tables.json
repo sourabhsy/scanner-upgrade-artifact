@@ -1,0 +1,886 @@
+{
+ "repeatability": {
+  "semgrep-1.172.0/sg-java-corpus": {
+   "rep1_n": 2565,
+   "rep2_n": 2565,
+   "identical": true
+  },
+  "semgrep-1.172.0/sg-java-project": {
+   "rep1_n": 26,
+   "rep2_n": 26,
+   "identical": true
+  },
+  "semgrep-1.172.0/sg-c-CWE121": {
+   "rep1_n": 4996,
+   "rep2_n": 4996,
+   "identical": true
+  },
+  "semgrep-1.172.0/sg-c-CWE122": {
+   "rep1_n": 2947,
+   "rep2_n": 2947,
+   "identical": true
+  },
+  "semgrep-1.172.0/sg-c-CWE190": {
+   "rep1_n": 2300,
+   "rep2_n": 2300,
+   "identical": true
+  },
+  "semgrep-1.172.0/sg-c-CWE476": {
+   "rep1_n": 0,
+   "rep2_n": 0,
+   "identical": true
+  },
+  "semgrep-1.172.0/sg-c-CWE78": {
+   "rep1_n": 4650,
+   "rep2_n": 4650,
+   "identical": true
+  },
+  "semgrep-1.172.0/sg-c-project": {
+   "rep1_n": 129,
+   "rep2_n": 129,
+   "identical": true
+  },
+  "semgrep-1.182.0/sg-java-corpus": {
+   "rep1_n": 2565,
+   "rep2_n": 2565,
+   "identical": true
+  },
+  "semgrep-1.182.0/sg-java-project": {
+   "rep1_n": 26,
+   "rep2_n": 26,
+   "identical": true
+  },
+  "semgrep-1.182.0/sg-c-CWE121": {
+   "rep1_n": 4996,
+   "rep2_n": 4996,
+   "identical": true
+  },
+  "semgrep-1.182.0/sg-c-CWE122": {
+   "rep1_n": 2947,
+   "rep2_n": 2947,
+   "identical": true
+  },
+  "semgrep-1.182.0/sg-c-CWE190": {
+   "rep1_n": 2300,
+   "rep2_n": 2300,
+   "identical": true
+  },
+  "semgrep-1.182.0/sg-c-CWE476": {
+   "rep1_n": 0,
+   "rep2_n": 0,
+   "identical": true
+  },
+  "semgrep-1.182.0/sg-c-CWE78": {
+   "rep1_n": 4650,
+   "rep2_n": 4650,
+   "identical": true
+  },
+  "semgrep-1.182.0/sg-c-project": {
+   "rep1_n": 141,
+   "rep2_n": 141,
+   "identical": true
+  },
+  "flawfinder-2.0.19/ff-c-CWE121": {
+   "rep1_n": 27035,
+   "rep2_n": 27035,
+   "identical": true
+  },
+  "flawfinder-2.0.19/ff-c-CWE122": {
+   "rep1_n": 12240,
+   "rep2_n": 12240,
+   "identical": true
+  },
+  "flawfinder-2.0.19/ff-c-CWE190": {
+   "rep1_n": 6685,
+   "rep2_n": 6685,
+   "identical": true
+  },
+  "flawfinder-2.0.19/ff-c-CWE476": {
+   "rep1_n": 276,
+   "rep2_n": 276,
+   "identical": true
+  },
+  "flawfinder-2.0.19/ff-c-CWE78": {
+   "rep1_n": 28805,
+   "rep2_n": 28805,
+   "identical": true
+  },
+  "flawfinder-2.0.19/ff-c-project": {
+   "rep1_n": 1224,
+   "rep2_n": 1224,
+   "identical": true
+  },
+  "flawfinder-2.0.20/ff-c-CWE121": {
+   "rep1_n": 27035,
+   "rep2_n": 27035,
+   "identical": true
+  },
+  "flawfinder-2.0.20/ff-c-CWE122": {
+   "rep1_n": 12240,
+   "rep2_n": 12240,
+   "identical": true
+  },
+  "flawfinder-2.0.20/ff-c-CWE190": {
+   "rep1_n": 6685,
+   "rep2_n": 6685,
+   "identical": true
+  },
+  "flawfinder-2.0.20/ff-c-CWE476": {
+   "rep1_n": 276,
+   "rep2_n": 276,
+   "identical": true
+  },
+  "flawfinder-2.0.20/ff-c-CWE78": {
+   "rep1_n": 28805,
+   "rep2_n": 28805,
+   "identical": true
+  },
+  "flawfinder-2.0.20/ff-c-project": {
+   "rep1_n": 1221,
+   "rep2_n": 1221,
+   "identical": true
+  }
+ },
+ "coverage": {
+  "flawfinder-2.0.19/ff-c-CWE121": {
+   "n_files": 5906,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.19/ff-c-CWE122": {
+   "n_files": 3656,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.19/ff-c-CWE190": {
+   "n_files": 5040,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.19/ff-c-CWE476": {
+   "n_files": 372,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.19/ff-c-CWE78": {
+   "n_files": 5600,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.19/ff-c-project": {
+   "n_files": 240,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.20/ff-c-CWE121": {
+   "n_files": 5906,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.20/ff-c-CWE122": {
+   "n_files": 3656,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.20/ff-c-CWE190": {
+   "n_files": 5040,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.20/ff-c-CWE476": {
+   "n_files": 372,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.20/ff-c-CWE78": {
+   "n_files": 5600,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "flawfinder-2.0.20/ff-c-project": {
+   "n_files": 240,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.172.0/sg-c-CWE121": {
+   "n_files": 5906,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.172.0/sg-c-CWE122": {
+   "n_files": 3656,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.172.0/sg-c-CWE190": {
+   "n_files": 5040,
+   "n_failed": 190,
+   "fail_rate": 0.0377,
+   "flag_5pct": false,
+   "reasons": {
+    "Syntax error at line <path>": 190
+   }
+  },
+  "semgrep-1.172.0/sg-c-CWE476": {
+   "n_files": 372,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.172.0/sg-c-CWE78": {
+   "n_files": 5600,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.172.0/sg-c-project": {
+   "n_files": 240,
+   "n_failed": 135,
+   "fail_rate": 0.5625,
+   "flag_5pct": true,
+   "reasons": {
+    "Syntax error at line <path>": 135
+   }
+  },
+  "semgrep-1.172.0/sg-java-corpus": {
+   "n_files": 2740,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.172.0/sg-java-project": {
+   "n_files": 264,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.182.0/sg-c-CWE121": {
+   "n_files": 5906,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.182.0/sg-c-CWE122": {
+   "n_files": 3656,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.182.0/sg-c-CWE190": {
+   "n_files": 5040,
+   "n_failed": 190,
+   "fail_rate": 0.0377,
+   "flag_5pct": false,
+   "reasons": {
+    "Syntax error at line <path>": 190
+   }
+  },
+  "semgrep-1.182.0/sg-c-CWE476": {
+   "n_files": 372,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.182.0/sg-c-CWE78": {
+   "n_files": 5600,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.182.0/sg-c-project": {
+   "n_files": 240,
+   "n_failed": 134,
+   "fail_rate": 0.5583,
+   "flag_5pct": true,
+   "reasons": {
+    "Syntax error at line <path>": 134
+   }
+  },
+  "semgrep-1.182.0/sg-java-corpus": {
+   "n_files": 2740,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  },
+  "semgrep-1.182.0/sg-java-project": {
+   "n_files": 264,
+   "n_failed": 0,
+   "fail_rate": 0.0,
+   "flag_5pct": false,
+   "reasons": {}
+  }
+ },
+ "layer_a_drift": {
+  "semgrep/sg-java-corpus": {
+   "old_n": 2565,
+   "new_n": 2565,
+   "shared": 2565,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "semgrep/sg-java-project": {
+   "old_n": 26,
+   "new_n": 26,
+   "shared": 26,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "semgrep/sg-c-CWE121": {
+   "old_n": 4996,
+   "new_n": 4996,
+   "shared": 4996,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "semgrep/sg-c-CWE122": {
+   "old_n": 2947,
+   "new_n": 2947,
+   "shared": 2947,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "semgrep/sg-c-CWE190": {
+   "old_n": 2300,
+   "new_n": 2300,
+   "shared": 2300,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "semgrep/sg-c-CWE476": {
+   "old_n": 0,
+   "new_n": 0,
+   "shared": 0,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "semgrep/sg-c-CWE78": {
+   "old_n": 4650,
+   "new_n": 4650,
+   "shared": 4650,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "semgrep/sg-c-project": {
+   "old_n": 129,
+   "new_n": 141,
+   "shared": 129,
+   "added": 12,
+   "removed": 0,
+   "added_by_rule": {
+    "insecure-use-memset": 12
+   },
+   "removed_by_rule": {}
+  },
+  "flawfinder/ff-c-CWE121": {
+   "old_n": 27035,
+   "new_n": 27035,
+   "shared": 27035,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "flawfinder/ff-c-CWE122": {
+   "old_n": 12240,
+   "new_n": 12240,
+   "shared": 12240,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "flawfinder/ff-c-CWE190": {
+   "old_n": 6685,
+   "new_n": 6685,
+   "shared": 6685,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "flawfinder/ff-c-CWE476": {
+   "old_n": 276,
+   "new_n": 276,
+   "shared": 276,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "flawfinder/ff-c-CWE78": {
+   "old_n": 28805,
+   "new_n": 28805,
+   "shared": 28805,
+   "added": 0,
+   "removed": 0,
+   "added_by_rule": {},
+   "removed_by_rule": {}
+  },
+  "flawfinder/ff-c-project": {
+   "old_n": 1224,
+   "new_n": 1221,
+   "shared": 1221,
+   "added": 0,
+   "removed": 3,
+   "added_by_rule": {},
+   "removed_by_rule": {
+    "FF1048": 3
+   }
+  }
+ },
+ "layer_b": {
+  "semgrep-1.172.0/java": {
+   "descriptive": {
+    "TP": 1118,
+    "FP": 552,
+    "FN": 297,
+    "TN": 773,
+    "P": 0.6694610778443114,
+    "R": 0.7901060070671378,
+    "F1": 0.7247974068071312
+   }
+  },
+  "semgrep-1.182.0/java": {
+   "descriptive": {
+    "TP": 1118,
+    "FP": 552,
+    "FN": 297,
+    "TN": 773,
+    "P": 0.6694610778443114,
+    "R": 0.7901060070671378,
+    "F1": 0.7247974068071312
+   }
+  },
+  "semgrep-1.172.0/c": {
+   "descriptive": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 9588,
+    "TN": 30969,
+    "P": null,
+    "R": 0.0,
+    "F1": 0.0
+   },
+   "shared": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 9588,
+    "TN": 30969,
+    "P": null,
+    "R": 0.0,
+    "F1": 0.0
+   }
+  },
+  "semgrep-1.182.0/c": {
+   "descriptive": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 9588,
+    "TN": 30969,
+    "P": null,
+    "R": 0.0,
+    "F1": 0.0
+   },
+   "shared": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 9588,
+    "TN": 30969,
+    "P": null,
+    "R": 0.0,
+    "F1": 0.0
+   }
+  },
+  "flawfinder-2.0.19/c": {
+   "descriptive": {
+    "TP": 375,
+    "FP": 600,
+    "FN": 9343,
+    "TN": 30949,
+    "P": 0.38461538461538464,
+    "R": 0.03858818686972628,
+    "F1": 0.07013934349574488
+   },
+   "shared": {
+    "TP": 375,
+    "FP": 600,
+    "FN": 9343,
+    "TN": 30949,
+    "P": 0.38461538461538464,
+    "R": 0.03858818686972628,
+    "F1": 0.07013934349574488
+   }
+  },
+  "flawfinder-2.0.20/c": {
+   "descriptive": {
+    "TP": 375,
+    "FP": 600,
+    "FN": 9343,
+    "TN": 30949,
+    "P": 0.38461538461538464,
+    "R": 0.03858818686972628,
+    "F1": 0.07013934349574488
+   },
+   "shared": {
+    "TP": 375,
+    "FP": 600,
+    "FN": 9343,
+    "TN": 30949,
+    "P": 0.38461538461538464,
+    "R": 0.03858818686972628,
+    "F1": 0.07013934349574488
+   }
+  }
+ },
+ "blocks": {
+  "semgrep/sg-java-corpus": {
+   "policy_old_n": 571,
+   "policy_new_n": 571,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 2740,
+   "n_common_decision_files": 2740
+  },
+  "semgrep/sg-java-project": {
+   "policy_old_n": 0,
+   "policy_new_n": 0,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 264,
+   "n_common_decision_files": 264
+  },
+  "semgrep/sg-c-CWE121": {
+   "policy_old_n": 0,
+   "policy_new_n": 0,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 5906,
+   "n_common_decision_files": 5906
+  },
+  "semgrep/sg-c-CWE122": {
+   "policy_old_n": 0,
+   "policy_new_n": 0,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 3656,
+   "n_common_decision_files": 3656
+  },
+  "semgrep/sg-c-CWE190": {
+   "policy_old_n": 0,
+   "policy_new_n": 0,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 5040,
+   "n_common_decision_files": 4850
+  },
+  "semgrep/sg-c-CWE476": {
+   "policy_old_n": 0,
+   "policy_new_n": 0,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 372,
+   "n_common_decision_files": 372
+  },
+  "semgrep/sg-c-CWE78": {
+   "policy_old_n": 0,
+   "policy_new_n": 0,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 5600,
+   "n_common_decision_files": 5600
+  },
+  "semgrep/sg-c-project": {
+   "policy_old_n": 0,
+   "policy_new_n": 0,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 240,
+   "n_common_decision_files": 105
+  },
+  "flawfinder/ff-c-CWE121": {
+   "policy_old_n": 1170,
+   "policy_new_n": 1170,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 5906,
+   "n_common_decision_files": 5906
+  },
+  "flawfinder/ff-c-CWE122": {
+   "policy_old_n": 638,
+   "policy_new_n": 638,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 3656,
+   "n_common_decision_files": 3656
+  },
+  "flawfinder/ff-c-CWE190": {
+   "policy_old_n": 190,
+   "policy_new_n": 190,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 5040,
+   "n_common_decision_files": 5040
+  },
+  "flawfinder/ff-c-CWE476": {
+   "policy_old_n": 0,
+   "policy_new_n": 0,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 372,
+   "n_common_decision_files": 372
+  },
+  "flawfinder/ff-c-CWE78": {
+   "policy_old_n": 2200,
+   "policy_new_n": 2200,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 5600,
+   "n_common_decision_files": 5600
+  },
+  "flawfinder/ff-c-project": {
+   "policy_old_n": 2,
+   "policy_new_n": 2,
+   "flips_newly_blocked": [],
+   "flips_newly_unblocked": [],
+   "flip_excluded_error_files": 0,
+   "n_manifest_files": 240,
+   "n_common_decision_files": 240
+  }
+ },
+ "checks": [
+  {
+   "check": "results reconcile flawfinder-2.0.19/ff-c-CWE121",
+   "pass": true,
+   "detail": "record=27035 scored=27035"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.19/ff-c-CWE122",
+   "pass": true,
+   "detail": "record=12240 scored=12240"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.19/ff-c-CWE190",
+   "pass": true,
+   "detail": "record=6685 scored=6685"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.19/ff-c-CWE476",
+   "pass": true,
+   "detail": "record=276 scored=276"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.19/ff-c-CWE78",
+   "pass": true,
+   "detail": "record=28805 scored=28805"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.19/ff-c-project",
+   "pass": true,
+   "detail": "record=1224 scored=1224"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.20/ff-c-CWE121",
+   "pass": true,
+   "detail": "record=27035 scored=27035"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.20/ff-c-CWE122",
+   "pass": true,
+   "detail": "record=12240 scored=12240"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.20/ff-c-CWE190",
+   "pass": true,
+   "detail": "record=6685 scored=6685"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.20/ff-c-CWE476",
+   "pass": true,
+   "detail": "record=276 scored=276"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.20/ff-c-CWE78",
+   "pass": true,
+   "detail": "record=28805 scored=28805"
+  },
+  {
+   "check": "results reconcile flawfinder-2.0.20/ff-c-project",
+   "pass": true,
+   "detail": "record=1221 scored=1221"
+  },
+  {
+   "check": "results reconcile semgrep-1.172.0/sg-c-CWE121",
+   "pass": true,
+   "detail": "record=4996 scored=4996"
+  },
+  {
+   "check": "results reconcile semgrep-1.172.0/sg-c-CWE122",
+   "pass": true,
+   "detail": "record=2947 scored=2947"
+  },
+  {
+   "check": "results reconcile semgrep-1.172.0/sg-c-CWE190",
+   "pass": true,
+   "detail": "record=2300 scored=2300"
+  },
+  {
+   "check": "results reconcile semgrep-1.172.0/sg-c-CWE476",
+   "pass": true,
+   "detail": "record=0 scored=0"
+  },
+  {
+   "check": "results reconcile semgrep-1.172.0/sg-c-CWE78",
+   "pass": true,
+   "detail": "record=4650 scored=4650"
+  },
+  {
+   "check": "results reconcile semgrep-1.172.0/sg-c-project",
+   "pass": true,
+   "detail": "record=129 scored=129"
+  },
+  {
+   "check": "results reconcile semgrep-1.172.0/sg-java-corpus",
+   "pass": true,
+   "detail": "record=2565 scored=2565"
+  },
+  {
+   "check": "results reconcile semgrep-1.172.0/sg-java-project",
+   "pass": true,
+   "detail": "record=26 scored=26"
+  },
+  {
+   "check": "results reconcile semgrep-1.182.0/sg-c-CWE121",
+   "pass": true,
+   "detail": "record=4996 scored=4996"
+  },
+  {
+   "check": "results reconcile semgrep-1.182.0/sg-c-CWE122",
+   "pass": true,
+   "detail": "record=2947 scored=2947"
+  },
+  {
+   "check": "results reconcile semgrep-1.182.0/sg-c-CWE190",
+   "pass": true,
+   "detail": "record=2300 scored=2300"
+  },
+  {
+   "check": "results reconcile semgrep-1.182.0/sg-c-CWE476",
+   "pass": true,
+   "detail": "record=0 scored=0"
+  },
+  {
+   "check": "results reconcile semgrep-1.182.0/sg-c-CWE78",
+   "pass": true,
+   "detail": "record=4650 scored=4650"
+  },
+  {
+   "check": "results reconcile semgrep-1.182.0/sg-c-project",
+   "pass": true,
+   "detail": "record=141 scored=141"
+  },
+  {
+   "check": "results reconcile semgrep-1.182.0/sg-java-corpus",
+   "pass": true,
+   "detail": "record=2565 scored=2565"
+  },
+  {
+   "check": "results reconcile semgrep-1.182.0/sg-java-project",
+   "pass": true,
+   "detail": "record=26 scored=26"
+  },
+  {
+   "check": "java TP+FN == 1415 (1.172.0)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "java FP+TN == 1325 (1.172.0)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "c positives reconcile (shared, semgrep)",
+   "pass": true,
+   "detail": "shared pos obs=9588"
+  },
+  {
+   "check": "all repeat pairs identical",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "flawfinder_mapping_crosscheck": {
+  "2.0.19": {
+   "findings": 76265,
+   "mismatched": 0
+  },
+  "2.0.20": {
+   "findings": 76262,
+   "mismatched": 0
+  }
+ }
+}

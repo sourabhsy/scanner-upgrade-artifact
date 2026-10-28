@@ -1,0 +1,423 @@
+{
+ "sealed_baselines_sha_note": "baselines read from sealed_baselines.json (sealed before workflow computation)",
+ "cases": {
+  "semgrep/java-corpus": {
+   "tool": "semgrep",
+   "batches": [
+    "sg-java-corpus"
+   ],
+   "added": 0,
+   "removed": 0,
+   "attr_diff": 0,
+   "coverage_loss": 0,
+   "coverage_gain": 0,
+   "rule_skip_loss": [],
+   "invocation_failed": false,
+   "block_flips_frozen": 0,
+   "block_flips_sensitivity": 0,
+   "sensitivity_common_n": 2740,
+   "sensitivity_flip_rate": 0.0,
+   "block_flips_sensitivity_raw": 0,
+   "sensitivity_raw_added": 0,
+   "sensitivity_raw_removed": 0,
+   "workflow": "PROCEED",
+   "reference": "ADOPT",
+   "benefit_source": "BEHAVIORAL",
+   "no_observed_scan_change": true,
+   "baseline_a": "PROCEED",
+   "baseline_b": "CHECK",
+   "value_vs_a": "AGREEMENT",
+   "value_vs_b": "BENEFICIAL-BEHAVIORAL"
+  },
+  "semgrep/java-project": {
+   "tool": "semgrep",
+   "batches": [
+    "sg-java-project"
+   ],
+   "added": 0,
+   "removed": 0,
+   "attr_diff": 0,
+   "coverage_loss": 0,
+   "coverage_gain": 0,
+   "rule_skip_loss": [],
+   "invocation_failed": false,
+   "block_flips_frozen": 0,
+   "block_flips_sensitivity": 0,
+   "sensitivity_common_n": 264,
+   "sensitivity_flip_rate": 0.0,
+   "block_flips_sensitivity_raw": 0,
+   "sensitivity_raw_added": 0,
+   "sensitivity_raw_removed": 0,
+   "workflow": "PROCEED",
+   "reference": "ADOPT",
+   "benefit_source": "BEHAVIORAL",
+   "no_observed_scan_change": true,
+   "baseline_a": "PROCEED",
+   "baseline_b": "CHECK",
+   "value_vs_a": "AGREEMENT",
+   "value_vs_b": "BENEFICIAL-BEHAVIORAL"
+  },
+  "semgrep/c-corpus": {
+   "tool": "semgrep",
+   "batches": [
+    "sg-c-CWE121",
+    "sg-c-CWE122",
+    "sg-c-CWE190",
+    "sg-c-CWE476",
+    "sg-c-CWE78"
+   ],
+   "added": 0,
+   "removed": 0,
+   "attr_diff": 0,
+   "coverage_loss": 0,
+   "coverage_gain": 0,
+   "rule_skip_loss": [],
+   "invocation_failed": false,
+   "block_flips_frozen": 0,
+   "block_flips_sensitivity": 0,
+   "sensitivity_common_n": 20384,
+   "sensitivity_flip_rate": 0.0,
+   "block_flips_sensitivity_raw": 0,
+   "sensitivity_raw_added": 0,
+   "sensitivity_raw_removed": 0,
+   "workflow": "PROCEED",
+   "reference": "ADOPT",
+   "benefit_source": "BEHAVIORAL",
+   "no_observed_scan_change": true,
+   "baseline_a": "PROCEED",
+   "baseline_b": "CHECK",
+   "value_vs_a": "AGREEMENT",
+   "value_vs_b": "BENEFICIAL-BEHAVIORAL"
+  },
+  "semgrep/c-project": {
+   "tool": "semgrep",
+   "batches": [
+    "sg-c-project"
+   ],
+   "added": 12,
+   "removed": 0,
+   "attr_diff": 0,
+   "coverage_loss": 0,
+   "coverage_gain": 1,
+   "rule_skip_loss": [],
+   "invocation_failed": false,
+   "block_flips_frozen": 0,
+   "block_flips_sensitivity": 0,
+   "sensitivity_common_n": 105,
+   "sensitivity_flip_rate": 0.0,
+   "block_flips_sensitivity_raw": 8,
+   "sensitivity_raw_added": 8,
+   "sensitivity_raw_removed": 0,
+   "workflow": "PROCEED",
+   "reference": "ADOPT",
+   "benefit_source": "BEHAVIORAL",
+   "no_observed_scan_change": false,
+   "baseline_a": "CHECK",
+   "baseline_b": "CHECK",
+   "value_vs_a": "BENEFICIAL-BEHAVIORAL",
+   "value_vs_b": "BENEFICIAL-BEHAVIORAL"
+  },
+  "flawfinder/c-corpus": {
+   "tool": "flawfinder",
+   "batches": [
+    "ff-c-CWE121",
+    "ff-c-CWE122",
+    "ff-c-CWE190",
+    "ff-c-CWE476",
+    "ff-c-CWE78"
+   ],
+   "added": 0,
+   "removed": 0,
+   "attr_diff": 0,
+   "coverage_loss": 0,
+   "coverage_gain": 0,
+   "rule_skip_loss": [],
+   "invocation_failed": false,
+   "block_flips_frozen": 0,
+   "block_flips_sensitivity": 0,
+   "sensitivity_common_n": 20574,
+   "sensitivity_flip_rate": 0.0,
+   "block_flips_sensitivity_raw": 0,
+   "sensitivity_raw_added": 0,
+   "sensitivity_raw_removed": 0,
+   "workflow": "PROCEED",
+   "reference": "ADOPT",
+   "benefit_source": "BEHAVIORAL",
+   "no_observed_scan_change": true,
+   "baseline_a": "PROCEED",
+   "baseline_b": "CHECK",
+   "value_vs_a": "AGREEMENT",
+   "value_vs_b": "BENEFICIAL-BEHAVIORAL"
+  },
+  "flawfinder/c-project": {
+   "tool": "flawfinder",
+   "batches": [
+    "ff-c-project"
+   ],
+   "added": 0,
+   "removed": 3,
+   "attr_diff": 0,
+   "coverage_loss": 0,
+   "coverage_gain": 0,
+   "rule_skip_loss": [],
+   "invocation_failed": false,
+   "block_flips_frozen": 0,
+   "block_flips_sensitivity": 0,
+   "sensitivity_common_n": 240,
+   "sensitivity_flip_rate": 0.0,
+   "block_flips_sensitivity_raw": 0,
+   "sensitivity_raw_added": 0,
+   "sensitivity_raw_removed": 0,
+   "workflow": "PROCEED",
+   "reference": "ADOPT",
+   "benefit_source": "BEHAVIORAL",
+   "no_observed_scan_change": false,
+   "baseline_a": "CHECK",
+   "baseline_b": "CHECK",
+   "value_vs_a": "BENEFICIAL-BEHAVIORAL",
+   "value_vs_b": "BENEFICIAL-BEHAVIORAL"
+  }
+ },
+ "layer_b_pairs": {
+  "semgrep/java": {
+   "old": {
+    "TP": 1118,
+    "FP": 552,
+    "FN": 297,
+    "TN": 773,
+    "P": 0.6694610778443114,
+    "R": 0.7901060070671378,
+    "F1": 0.7247974068071312
+   },
+   "new": {
+    "TP": 1118,
+    "FP": 552,
+    "FN": 297,
+    "TN": 773,
+    "P": 0.6694610778443114,
+    "R": 0.7901060070671378,
+    "F1": 0.7247974068071312
+   },
+   "f1_diff": 0.0
+  },
+  "semgrep/c": {
+   "old": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 9588,
+    "TN": 30969,
+    "P": null,
+    "R": 0.0,
+    "F1": 0.0
+   },
+   "new": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 9588,
+    "TN": 30969,
+    "P": null,
+    "R": 0.0,
+    "F1": 0.0
+   },
+   "f1_diff": 0.0
+  },
+  "flawfinder/c": {
+   "old": {
+    "TP": 375,
+    "FP": 600,
+    "FN": 9343,
+    "TN": 30949,
+    "P": 0.38461538461538464,
+    "R": 0.03858818686972628,
+    "F1": 0.07013934349574488
+   },
+   "new": {
+    "TP": 375,
+    "FP": 600,
+    "FN": 9343,
+    "TN": 30949,
+    "P": 0.38461538461538464,
+    "R": 0.03858818686972628,
+    "F1": 0.07013934349574488
+   },
+   "f1_diff": 0.0
+  }
+ },
+ "criteria": {
+  "a_confirmed_rank_change": [],
+  "b_descriptive_move_ge_0.05": [],
+  "c_block_flips_ge_5pct_frozen": [],
+  "d_workflow_differs": {
+   "vs_a": [
+    "semgrep/c-project",
+    "flawfinder/c-project"
+   ],
+   "vs_b": [
+    "semgrep/java-corpus",
+    "semgrep/java-project",
+    "semgrep/c-corpus",
+    "semgrep/c-project",
+    "flawfinder/c-corpus",
+    "flawfinder/c-project"
+   ]
+  }
+ },
+ "bootstrap": {
+  "semgrep/java": {
+   "B": 2000,
+   "seed": 42,
+   "subset": "descriptive",
+   "n_clusters": 11,
+   "n_obs_per_version": 2740,
+   "mean_diff": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "skipped_resamples": 0
+  },
+  "semgrep/c": {
+   "B": 2000,
+   "seed": 42,
+   "subset": "shared",
+   "n_clusters": 378,
+   "n_obs_per_version": 40557,
+   "mean_diff": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "skipped_resamples": 0
+  },
+  "flawfinder/c": {
+   "B": 2000,
+   "seed": 42,
+   "subset": "shared",
+   "n_clusters": 383,
+   "n_obs_per_version": 41267,
+   "mean_diff": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "skipped_resamples": 0
+  }
+ },
+ "label_flip_sensitivity": {
+  "semgrep/java": {
+   "0.01": {
+    "sims": 200,
+    "paired_flips": true,
+    "skipped_sims": 0,
+    "max_abs_diff": 0.0,
+    "n_ge_0.05": 0
+   },
+   "0.05": {
+    "sims": 200,
+    "paired_flips": true,
+    "skipped_sims": 0,
+    "max_abs_diff": 0.0,
+    "n_ge_0.05": 0
+   }
+  },
+  "semgrep/c": {
+   "0.01": {
+    "sims": 200,
+    "paired_flips": true,
+    "skipped_sims": 0,
+    "max_abs_diff": 0.0,
+    "n_ge_0.05": 0
+   },
+   "0.05": {
+    "sims": 200,
+    "paired_flips": true,
+    "skipped_sims": 0,
+    "max_abs_diff": 0.0,
+    "n_ge_0.05": 0
+   }
+  },
+  "flawfinder/c": {
+   "0.01": {
+    "sims": 200,
+    "paired_flips": true,
+    "skipped_sims": 0,
+    "max_abs_diff": 0.0,
+    "n_ge_0.05": 0
+   },
+   "0.05": {
+    "sims": 200,
+    "paired_flips": true,
+    "skipped_sims": 0,
+    "max_abs_diff": 0.0,
+    "n_ge_0.05": 0
+   }
+  }
+ },
+ "benefit_partition": {
+  "vs_baseline_a": {
+   "beneficial": {
+    "LABEL": 0,
+    "MECHANICAL": 0,
+    "BEHAVIORAL": 2
+   },
+   "denominators": {
+    "label_derived_reference_cases": 0,
+    "mechanical_driver_cases": 0,
+    "zero_driver_reference_cases": 6,
+    "determinate_reference_cases": 6
+   },
+   "combined": 2
+  },
+  "vs_baseline_b": {
+   "beneficial": {
+    "LABEL": 0,
+    "MECHANICAL": 0,
+    "BEHAVIORAL": 6
+   },
+   "denominators": {
+    "label_derived_reference_cases": 0,
+    "mechanical_driver_cases": 0,
+    "zero_driver_reference_cases": 6,
+    "determinate_reference_cases": 6
+   },
+   "combined": 6
+  }
+ },
+ "drift_event_coding": [
+  {
+   "event": "Semgrep curl: +12 insecure-use-memset (WARNING) on 8 files, 0 removed",
+   "code": "engine behavior changed",
+   "evidence": "Pack byte-identical across endpoints (freeze), so no rule change can explain it. All 8 files carry a parse error under BOTH versions: added findings come from improved partial-parse yield, not clean-file detection change. Candidate engine changes in range: c grammar v0.24.2 (v1.179.0) and tree-sitter C runtime 0.26.3 (v1.178.0). Vendor notes do NOT attribute this drift (v1.179.0 notes claim 'No verified user-facing improvements' for the C grammar update) \u2014 attribution is inferential (language + timing match), not vendor-stated.",
+   "block_affecting": false
+  },
+  {
+   "event": "Semgrep curl: tool_help.c newly parses (error files 135 -> 134)",
+   "code": "engine behavior changed",
+   "evidence": "Same candidate C-parser changes as above; notes silent on this file. Coverage gain, not loss.",
+   "block_affecting": false
+  },
+  {
+   "event": "Flawfinder curl: -3 FF1048 (random, Level 3, CWE-327) in lib/vtls/vtls.c lines 353/354/589",
+   "code": "rule logic changed",
+   "evidence": "Removed findings are member accesses Curl_ssl->random / Curl_ssl->random(data,...). 2.0.20 ChangeLog documents exactly this fix: functions no longer flagged when preceded by '.' or '->'. FF1048 mapping identical across versions (category random, CWE [327], level 3) \u2014 the change is matching logic, not patterns. Vendor-stated mechanism matches the observed construct exactly.",
+   "block_affecting": false
+  },
+  {
+   "event": "Documented changelog changes with ZERO observed effect on this corpus",
+   "code": "no observed effect (predicted change, unobserved here)",
+   "evidence": "Semgrep: C++ range-for structured-bindings parse fix (v1.182.0), Dart matching improvements (v1.180.0), duplicate-finding fix (v1.173.0), Go/Hack/Dart/C#/HCL/Lua grammar updates. Flawfinder: strlen-literal, equal/mismatch/ranges-identifier, swprintf position, __attribute__ FP fixes. Zero drift on all 5 benchmark CWE dirs + Java corpus/project under both tools shows these entries did not move this corpus.",
+   "block_affecting": false
+  }
+ ],
+ "checks": {
+  "drift_recomputed_matches_scorer": true,
+  "semgrep_error_counts_match_scorer": true,
+  "all_invocations_exit_0": true,
+  "skipped_rules_empty_all_semgrep_cells": true,
+  "sensitivity_flips_split_eligible_vs_raw": true,
+  "skipped_rules_read_top_level": true,
+  "scanned_sets_compared_all_semgrep_batches": true,
+  "reference_derived_not_hardcoded": true,
+  "f1_direct_count_formula": true
+ }
+}
