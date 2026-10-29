@@ -17,7 +17,7 @@ if the author prefers a different label.
   were verified against PyPI's published hashes before the verifier
   was delivered.
 - `comparison-report.txt`: full `docker logs` output of the author's
-  verification run (241 lines; ALL COMPARE CHECKS PASS; 146 PASS lines;
+  verification run (240 lines; ALL COMPARE CHECKS PASS; 146 PASS lines;
   semgrep/c-project flips (0, 0, 8) reproduced exactly).
 - `output-hashes.csv`: SHA-256 of the author's 28 rep1 outputs.
 - `environment.txt`: Docker version and image listing from the author's

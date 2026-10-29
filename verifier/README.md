@@ -17,13 +17,28 @@ against the SHA-256 PyPI publishes for that exact file.
 
 - **Docker Desktop** (Mac or Windows) — the only install. Get it from
   docker.com. No Python, no git, no SDK, no compiler on the host.
+- **The complete supplemental ZIP** (`t5-verify-docker-wheels.zip`,
+  SHA-256 `77c4031e92f893188a2e688a50a384b18fbc5510c0eca05ce9dacb95f36624ae`),
+  which accompanies the article as supplemental material. Verify the
+  hash after downloading.
+
+> **The GitHub checkout alone cannot build this image.** The
+> `Dockerfile` copies `wheels/`, `manifests/`, and `bundle/`, and none
+> of those three directories is stored in git (the wheel package alone
+> is ~150 MB, over GitHub's 100 MB file limit). If you build from this
+> checkout without them, the build fails at the first `COPY`. You must
+> supply them from the supplemental ZIP (see step 1 below).
 
 ## Steps
 
-1. Unzip this folder. Open a terminal **in the folder** (it contains
-   the `Dockerfile`).
-2. Build the image (needs internet only for the base image pull from
-   Docker Hub; the tool installs are offline from the bundled wheels):
+1. Unzip the supplemental ZIP. Open a terminal **in the unzipped
+   folder** (`t5-verify-docker-wheels/` — it contains the `Dockerfile`,
+   `scripts/`, `wheels/`, `manifests/`, and `bundle/`).
+   (Alternative: to build from this GitHub checkout instead, copy
+   `wheels/`, `manifests/`, and `bundle/` from the unzipped ZIP into
+   this `verifier/` folder first, so it contains the `Dockerfile`
+   alongside all three directories, then build there.)
+2. Build the image. Building requires access to Docker Hub and Debian package repositories. Python dependencies are installed offline from the bundled wheels:
    ```
    docker build -t t5-verify .
    ```
@@ -86,11 +101,7 @@ Resources → CPUs (give it more cores).
 
 ## Troubleshooting (this variant)
 
-- **Build fails pulling the base image.** The only network the build
-  needs is Docker Hub (`python:3.12-slim-bookworm`). If that fails,
-  it's Docker Hub reachability or Docker Desktop's proxy settings
-  (which do cover image pulls). The tool installs cannot fail on TLS:
-  they are offline from the bundled wheels.
+- **Build fails pulling the base image.** Building requires access to Docker Hub and Debian package repositories. Python dependencies are installed offline from the bundled wheels. If the base-image pull fails, it's Docker Hub reachability or Docker Desktop's proxy settings (which do cover image pulls). If the `apt-get` step fails, it's Debian repository reachability. The tool installs cannot fail on TLS: they are offline from the bundled wheels.
 - **Build fails at the pip step with "no matching distribution".**
   That means a wheel is missing from `wheels/` — a packaging bug on
   the author's side, not your network. Paste the error back.

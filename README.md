@@ -27,8 +27,11 @@ decision under pre-set criteria is ADOPT in all six.
 - Evidence replay: follow the replay instructions in
   `evidence/README.md` (`replay.py` re-derives the tables from the
   bundled findings and coverage records).
-- Docker verifier (from the unzipped verifier folder, or from
-  `verifier/` here):
+- Docker verifier (from the unzipped supplemental ZIP folder; or from
+  `verifier/` here only after copying `wheels/`, `manifests/`, and
+  `bundle/` from the ZIP into it — those three directories are not
+  stored in git, so a plain checkout build fails at the first `COPY`;
+  see `verifier/README.md`):
   `docker build -t t5-verify .` then
   `docker run --rm -v "$PWD/t5-verify-work:/work" t5-verify`
   (add `--skip-setup` to reuse checkouts and environments; it skips
